@@ -465,7 +465,9 @@ def degrade_for_sr(
 
     # Downscale
     w, h = img.size
-    scale = rng.choice([2, 3, 4, 6, 8])
+    # Downscale
+    w, h = img.size
+    scale = 2  # Fixed scale 2 for this model
     lw = max(8, w // scale)
     lh = max(8, h // scale)
 
