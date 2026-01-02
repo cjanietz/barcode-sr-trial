@@ -757,9 +757,8 @@ network_g:
   num_in_ch: 3
   num_out_ch: 3
   upscale: {scale}
-  # SPAN specific defaults (adjust if needed)
-  num_feat: 48
-  num_block: 6  # Check your pretrained model structure!
+  # SPAN specific defaults
+  feature_channels: 48
 
 path:
   pretrain_network_g: {pretrained_path if pretrained_path else "~"}
