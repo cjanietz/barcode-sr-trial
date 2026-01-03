@@ -61,3 +61,10 @@ train:
 	uv run python start_fine_tuning.py --dataset_dir $(OUT_DIR)
 
 
+.PHONY: test-onnx
+test-onnx:
+	uv run --with onnxruntime --with opencv-python --with numpy python test_onnx.py --input test_input.png --output test_output.png
+
+.PHONY: onnx
+onnx:
+	uv run --no-project --python 3.11 --with "torch==2.0.1" --with "torchvision==0.15.2" --with "numpy<2" --with onnx --with opencv-python --with pillow --with tqdm --with pyyaml --with scipy python export_onnx.py

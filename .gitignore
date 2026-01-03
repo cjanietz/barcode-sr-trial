@@ -130,4 +130,8 @@ venv.bak/
 # VSCode
 .vscode/
 
+# Generated Data
 barcode_sr_data/
+
+# ONNX Model Files
+*.onnx
